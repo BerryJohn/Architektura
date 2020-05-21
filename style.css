@@ -22,12 +22,12 @@ body {
 
 #winReg {
     width: 300px;
-    height: 500px;
+    height: auto;
 }
 
 #winMem {
     width: 200px;
-    height: 180px;
+    height: 120px;
     display: flex;
     align-items: center;
 }
@@ -51,20 +51,35 @@ body {
 }
 
 .reg {
-    background-color: red;
+    background-color: whitesmoke;
     width: 90%;
     height: 30px;
     font-size: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.regHigh {
+    /* background-color: yellow; */
+}
+
+.regLow {
+    /* background-color: purple; */
+}
+
+.reg:nth-child(4) {
+    margin-bottom: 20px;
 }
 
 .regOut {
-    background-color: green;
+    background-color: whitesmoke;
     width: 95%;
-    height: 25px;
-    font-size: 25px;
+    height: 30px;
+    font-size: 30px;
+    text-align: center;
 }
 
-#reset {
+.button {
     width: 50px;
     height: 30px;
     background-color: rgb(107, 107, 107);
@@ -85,8 +100,56 @@ body {
     align-items: center;
 }
 
-#adrBar {
-    width: 150px;
+#adrBar:focus {
+    outline: none;
+}
+
+.console {
+    width: 400px;
+    height: 200px;
+    background-color: black;
+    color: green;
+    padding: 5px;
+    overflow-y: scroll;
+}
+
+.console::-webkit-scrollbar {
+    display: none;
+}
+
+.clsLine>input {
+    width: 95%;
     height: 20px;
-    background-color: white;
+    background-color: transparent;
+    border: 0px;
+    font-size: 18px;
+    color: green;
+}
+
+.clsActive>span {
+    animation-name: arAnim;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes arAnim {
+    0% {
+        opacity: 1;
+    }
+
+    49% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    99% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
